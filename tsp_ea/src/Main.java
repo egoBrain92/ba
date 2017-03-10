@@ -1,13 +1,12 @@
-
-
 public class Main {
 
 	public static void main(String[] args) {
 		
 		//init cities
 		for(int i = 0; i < 10; i++){
-			//City newCity = new City(i, i);
-	        TourManager.addCity(new City(Integer.toString(i) ,i, i));
+			
+	        //TourManager.addCity(new City(Integer.toString(i) ,i, i)); //default constructor could be used
+	        TourManager.addCity(new City());
 		}
 
         //print results

@@ -11,7 +11,7 @@ import java.util.Collections;
 public class Tour{
 
     // Holds our tour of cities
-    private ArrayList tour = new ArrayList<City>();
+    private ArrayList<City> tour = new ArrayList<City>();
     // Cache
     private double fitness = 0;
     private int distance = 0;
@@ -23,7 +23,7 @@ public class Tour{
         }
     }
     
-    public Tour(ArrayList tour){
+    public Tour(ArrayList<City> tour){
         this.tour = tour;
     }
 

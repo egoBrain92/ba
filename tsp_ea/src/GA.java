@@ -3,13 +3,6 @@
 * Manages algorithms for evolving population
 */
 
-
-
-import java.util.ArrayList;
-
-
-
-
 public class GA {
 	
 	private static final double mutationRate = 0.00001;
@@ -59,7 +52,7 @@ public class GA {
 	public static Tour chooseParent(Population pop){
 		
 		double selection = Math.random();
-		double fitness = 0;
+		//double fitness = 0;
 		
 		double percent = 0;
 		
@@ -158,5 +151,4 @@ public class GA {
         }
         return child;
     }	
-	
 }
