@@ -21,7 +21,7 @@ public class GA {
 			newTours[i] = child;
 		}
 		
-		System.out.print("	" + "	" + pop.getFittest().getDistance() + "	"+ (int) pop.getAverageDistance() + "\n");
+		System.out.print("	" + "	" + pop.getFittest().getDistance() + "	" + (int) pop.getAverageDistance()+ "	" + pop.getFittest().toString() + "\n");
 		
 		for(int j = 0; j < pop.populationSize(); j++){
 			pop.saveTour(j, newTours[j]);
@@ -30,20 +30,20 @@ public class GA {
 		return pop;
 	}
 	
-	// Mutate a tour using swap mutation
+	//Mutate a tour using swap mutation
     private static void mutate(Tour tour) {
-        // Loop through tour cities
+        //Loop through tour cities
         for(int tourPos1=0; tourPos1 < tour.tourSize(); tourPos1++){
-            // Apply mutation rate
+            //Apply mutation rate
             if(Math.random() < mutationRate){
-                // Get a second random position in the tour
+                //Get a second random position in the tour
                 int tourPos2 = (int) (tour.tourSize() * Math.random());
 
-                // Get the cities at target position in tour
+                //Get the cities at target position in tour
                 City city1 = tour.getCity(tourPos1);
                 City city2 = tour.getCity(tourPos2);
 
-                // Swap them around
+                //Swap them around
                 tour.setCity(tourPos2, city1);
                 tour.setCity(tourPos1, city2);
             }
@@ -74,10 +74,10 @@ public class GA {
 	}
 	
 	/*public static Tour crossover(Tour parent1, Tour parent2) {
-        // Create new child tour
+        //Create new child tour
         Tour child = new Tour();
 
-        // Get start and end sub tour positions for parent1's tour
+        //Get start and end sub tour positions for parent1's tour
         int startPos;
         int endPos;
         
@@ -92,18 +92,18 @@ public class GA {
         	endPos = number1;
         }
         
-        // Loop and add the sub tour from parent1 to our child
+        //Loop and add the sub tour from parent1 to our child
         for (int i = startPos; endPos < child.tourSize(); i++) {
         	child.setCity(i, parent1.getCity(i));
         }
 
-        // Loop through parent2's city tour
+        //Loop through parent2's city tour
         for (int i = 0; i < parent2.tourSize(); i++) {
-            // If child doesn't have the city add it
+            //If child doesn't have the city add it
             if (!child.containsCity(parent2.getCity(i))) {
-                // Loop to find a spare position in the child's tour
+                //Loop to find a spare position in the child's tour
                 for (int j = 0; j < child.tourSize(); j++) {
-                    // Spare position found, add city
+                    //Spare position found, add city
                     if (child.getCity(j) == null) {
                         child.setCity(j, parent2.getCity(i));
                         break;
@@ -116,18 +116,18 @@ public class GA {
 	
 	
 	public static Tour crossover(Tour parent1, Tour parent2) {
-        // Create new child tour
+        //Create new child tour
         Tour child = new Tour();
-        // Get start and end sub tour positions for parent1's tour
+        //Get start and end sub tour positions for parent1's tour
         int startPos = (int) (Math.random() * parent1.tourSize());
         int endPos = (int) (Math.random() * parent1.tourSize());
 
-        // Loop and add the sub tour from parent1 to our child
+        //Loop and add the sub tour from parent1 to our child
         for (int i = 0; i < child.tourSize(); i++) {
-            // If our start position is less than the end position
+            //If our start position is less than the end position
             if (startPos < endPos && i > startPos && i < endPos) {
                 child.setCity(i, parent1.getCity(i));
-            } // If our start position is larger
+            } //If our start position is larger
             else if (startPos > endPos) {
                 if (!(i < startPos && i > endPos)) {
                     child.setCity(i, parent1.getCity(i));
@@ -135,13 +135,13 @@ public class GA {
             }
         }
 
-        // Loop through parent2's city tour
+        //Loop through parent2's city tour
         for (int i = 0; i < parent2.tourSize(); i++) {
-            // If child doesn't have the city add it
+            //If child doesn't have the city add it
             if (!child.containsCity(parent2.getCity(i))) {
-                // Loop to find a spare position in the child's tour
+                //Loop to find a spare position in the child's tour
                 for (int ii = 0; ii < child.tourSize(); ii++) {
-                    // Spare position found, add city
+                    //Spare position found, add city
                     if (child.getCity(ii) == null) {
                         child.setCity(ii, parent2.getCity(i));
                         break;

@@ -9,41 +9,41 @@ public class City {
     int y;
   
     
-    // Constructs a randomly placed city
+    //Constructs a randomly placed city
     public City(){
-        this.cityName = "defautCityName";
+        this.cityName = "ID";
         this.x = (int)(Math.random()*200);
         this.y = (int)(Math.random()*200);
     }
     
-    // Constructs a city at chosen x, y location
+    //Constructs a city at chosen x, y location
     public City(String cityName, int x, int y){
         this.cityName = cityName;
         this.x = x;
         this.y = y;
     }
     
-    // Sets city's cityName
+    //Sets city's cityName
     public void setCityName(String newCityName){
         this.cityName = newCityName;
     }
     
-    // Gets city's cityName
+    //Gets city's cityName
     public String getCityName(){
         return this.cityName;
     }
     
-    // Gets city's x coordinate
+    //Gets city's x coordinate
     public int getX(){
         return this.x;
     }
     
-    // Gets city's y coordinate
+    //Gets city's y coordinate
     public int getY(){
         return this.y;
     }
     
-    // Gets the distance to given city
+    //Gets the distance to given city
     public double distanceTo(City city){
         int xDistance = Math.abs(getX() - city.getX());
         int yDistance = Math.abs(getY() - city.getY());
