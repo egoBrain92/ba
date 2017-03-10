@@ -3,22 +3,34 @@
 * Models a city
 */
 
-
-
 public class City {
+    String cityName;
     int x;
     int y;
+  
     
     // Constructs a randomly placed city
     public City(){
+        this.cityName = "defautCityName";
         this.x = (int)(Math.random()*200);
         this.y = (int)(Math.random()*200);
     }
     
     // Constructs a city at chosen x, y location
-    public City(int x, int y){
+    public City(String cityName, int x, int y){
+        this.cityName = cityName;
         this.x = x;
         this.y = y;
+    }
+    
+    // Sets city's cityName
+    public void setCityName(String newCityName){
+        this.cityName = newCityName;
+    }
+    
+    // Gets city's cityName
+    public String getCityName(){
+        return this.cityName;
     }
     
     // Gets city's x coordinate
@@ -42,6 +54,6 @@ public class City {
     
     @Override
     public String toString(){
-        return getX()+", "+getY();
+        return getCityName() + ": " + getX()+", "+getY();
     }
 }

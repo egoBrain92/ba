@@ -4,110 +4,20 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//test commit
-		// Create and add our cities
-		/*//line citys
-		City city1 = new City(0, 0);
-		TourManager.addCity(city1);
-        City city2 = new City(0, 10);
-        TourManager.addCity(city2);
-        City city3 = new City(0, 20);
-        TourManager.addCity(city3);
-        City city4 = new City(0, 30);
-        TourManager.addCity(city4);
-        City city5 = new City(0,40);
-        TourManager.addCity(city5);
-        City city6 = new City(0, 50);
-        TourManager.addCity(city6);
-		
-        */
-        
-		/*
-		City city = new City(60, 200);
-        TourManager.addCity(city);
-        City city2 = new City(180, 200);
-        TourManager.addCity(city2);
-        City city3 = new City(80, 180);
-        TourManager.addCity(city3);
-        City city4 = new City(140, 180);
-        TourManager.addCity(city4);
-        City city5 = new City(20, 160);
-        TourManager.addCity(city5);
-        City city6 = new City(100, 160);
-        TourManager.addCity(city6);
-        City city7 = new City(200, 160);
-        TourManager.addCity(city7);
-        City city8 = new City(140, 140);
-        TourManager.addCity(city8);
-        City city9 = new City(40, 120);
-        TourManager.addCity(city9);
-        City city10 = new City(100, 120);
-        TourManager.addCity(city10);
-        
-        */
-		
-	
-        City city = new City(60, 200);
-        TourManager.addCity(city);
-        City city2 = new City(180, 200);
-        TourManager.addCity(city2);
-        City city3 = new City(80, 180);
-        TourManager.addCity(city3);
-        City city4 = new City(140, 180);
-        TourManager.addCity(city4);
-        City city5 = new City(20, 160);
-        TourManager.addCity(city5);
-        City city6 = new City(100, 160);
-        TourManager.addCity(city6);
-        City city7 = new City(200, 160);
-        TourManager.addCity(city7);
-        City city8 = new City(140, 140);
-        TourManager.addCity(city8);
-        City city9 = new City(40, 120);
-        TourManager.addCity(city9);
-        City city10 = new City(100, 120);
-        TourManager.addCity(city10);
-        City city11 = new City(180, 100);
-        TourManager.addCity(city11);
-        City city12 = new City(60, 80);
-        TourManager.addCity(city12);
-        City city13 = new City(120, 80);
-        TourManager.addCity(city13);
-        City city14 = new City(180, 60);
-        TourManager.addCity(city14);
-        City city15 = new City(20, 40);
-        TourManager.addCity(city15);
-        City city16 = new City(100, 40);
-        TourManager.addCity(city16);
-        City city17 = new City(200, 40);
-        TourManager.addCity(city17);
-        City city18 = new City(20, 20);
-        TourManager.addCity(city18);
-        City city19 = new City(60, 20);
-        TourManager.addCity(city19);
-        City city20 = new City(160, 20);
-        TourManager.addCity(city20);
-       
-        
+		//init cities
+		for(int i = 0; i < 10; i++){
+			//City newCity = new City(i, i);
+	        TourManager.addCity(new City(Integer.toString(i) ,i, i));
+		}
+
+        //print results
         System.out.println("init	" + "avg	" + "fittest	" + "avg");
-        
-//        for (int j = 0; j < 300; j++){ 		//run simu J amount of times
-        
-	        // Initialize population
-	        Population pop = new Population(300);
-	        
-	        
-//	        System.out.print(pop.getFittest().getDistance() + "	" + (int) pop.getAverageDistance());
-	
-	        // Evolve population for 100 generations
-	        pop = GA.selection(pop);
-	        for (int i = 0; i < 600; i++) {
-	            pop = GA.selection(pop);
-	        }
-	        
-//	        System.out.print("	" + pop.getFittest().getDistance() + "	"+ (int) pop.getAverageDistance() + "\n");
 
-//        }
+        Population pop = new Population(300);
+
+        pop = GA.selection(pop);
+        for (int i = 0; i < 300; i++) {
+            pop = GA.selection(pop);
+        }
     }
-
 }

@@ -1,5 +1,5 @@
 # ba
-## guides
+## helpfull links and guides
 ##### git and eclipse guide:  
 https://www.youtube.com/watch?v=cdsMIX9gB94  
 https://www.youtube.com/watch?v=M88sKbRDR8Y&list=PLyCD4xKABPa7FN8wY_N99KUwI0zBLHfY1&index=2  
