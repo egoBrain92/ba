@@ -5,8 +5,8 @@ import javax.swing.*;
 
 public class GUIFrame extends JFrame{
 	
-	static int windowSizeX = 600;
-	static int windowSizeY = 400;
+	static int windowSizeX = 1000;
+	static int windowSizeY = 1000;
 	
 
 	public GUIFrame(JPanel t) {

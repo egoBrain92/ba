@@ -15,7 +15,7 @@ public class Tour{
     //Cache
     private double fitness = 0;
     private int distance = 0;
-    private Boolean roundTrip = false;
+    private Boolean roundTrip = true;
     
     //Constructs a blank tour
     public Tour(){

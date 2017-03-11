@@ -5,7 +5,8 @@
 
 public class GA {
 	
-	private static final double mutationRate = 0.00001;
+	//private static final double mutationRate = 0.00001;
+	private static final double mutationRate = 1/(Main.citieCount^2);
 
 	public static Population selection (Population pop){
 		
@@ -21,7 +22,7 @@ public class GA {
 			newTours[i] = child;
 		}
 		
-		System.out.print("	" + "	" + pop.getFittest().getDistance() + "	" + (int) pop.getAverageDistance()+ "	" + pop.getFittest().toString() + "\n");
+		System.out.print("	" + "	" + pop.getFittest().getDistance() + "	" + (int) pop.getAverageDistance()+ "	" /*+ pop.getFittest().toString()*/ + "\n");
 		
 		for(int j = 0; j < pop.populationSize(); j++){
 			pop.saveTour(j, newTours[j]);

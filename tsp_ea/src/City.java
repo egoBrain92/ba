@@ -12,8 +12,9 @@ public class City {
     //Constructs a randomly placed city
     public City(){
         this.cityName = "ID";
-        this.x = (int)(Math.random()*200);
-        this.y = (int)(Math.random()*200);
+        //Math.random() * (500 - 100) + 100;
+        this.x = (int)(Math.random() * (950 - 50) + 50);
+        this.y = (int)(Math.random() * (950 - 50) + 50);
     }
     
     //Constructs a city at chosen x, y location
