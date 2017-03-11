@@ -1,8 +1,5 @@
 import javax.swing.*;
-
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,6 +7,7 @@ import java.util.ArrayList;
 
 public class GUIElements extends JPanel implements ActionListener {
 
+	private static final long serialVersionUID = -3721639296090667665L; //unused
 	int velX = 1;
 	public int x1 = 100;
 	public int y1 = 10;

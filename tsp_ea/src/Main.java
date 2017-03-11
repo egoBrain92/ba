@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 
 public class Main {
-	
-	
+		
 	public static int citieCount = 24; // 24 cities with google stuff
 	public static int popSize = 1000;
 	public static int generations = 2000;
@@ -90,7 +89,7 @@ public class Main {
         
         GUIElements jp = new GUIElements();
 
-        GUIFrame jf = new GUIFrame(jp);
+//        GUIFrame jf = new GUIFrame(jp);
         
         pop = GA.selection(pop);
         for (int i = 0; i < generations; i++) {

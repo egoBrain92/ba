@@ -1,13 +1,10 @@
-import java.awt.FlowLayout;
-
 import javax.swing.*;
 
+public class GUIFrame extends JFrame {
 
-public class GUIFrame extends JFrame{
-	
+	private static final long serialVersionUID = 8456219051373839560L; // unused
 	static int windowSizeX = 1000;
 	static int windowSizeY = 1000;
-	
 
 	public GUIFrame(JPanel t) {
 		this.setTitle("tsp_ea");
@@ -17,11 +14,10 @@ public class GUIFrame extends JFrame{
 		this.add(t);
 
 	}
-	
+
 	public static int getWindowSizeX() {
 		return windowSizeX;
 	}
-
 
 	public static int getWindowSizeY() {
 		return windowSizeY;
